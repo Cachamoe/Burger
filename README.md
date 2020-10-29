@@ -1,14 +1,14 @@
 # Burger
 ![]()
 ## Overview
-This is an application that
+This is an application that allows the user to 
 
 Here is a link to the deployed webpage: []
 
 ## Application Features
-1) Add departments, roles, and employees
-2) View departments, roles, and employees
-3) Update employee roles
+1) 
+2) 
+3) 
 
 ## Programs 
 Javascript, MySQL, Node.js, JSON, Terminal
