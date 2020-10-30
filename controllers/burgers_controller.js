@@ -8,11 +8,11 @@ let burger = require("../models/burger.js");
 // Create Routes
 router.get("/", function (req, res) {
     burger.all(function (data) {
-        let burObject = {
+        let burgerObject = {
             burgers: data
         };
-        console.log(burObject);
-        res.render("index", burObject);
+        console.log(burgerObject);
+        res.render("index", burgerObject);
     });
 });
 

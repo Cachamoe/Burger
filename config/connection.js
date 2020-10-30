@@ -12,10 +12,10 @@ let connection = mysql.createConnection({
 // Make MySQL connection
 connection.connect(function (err) {
     if (err) {
-        console.error("error connecting: " + err);
+        console.error("error connecting: " + err.stack);
         return;
     }
-    console.log("connected: " + connection);
+    console.log("connected: " + connection.threadId);
 });
 
 // Export MySQL connection
