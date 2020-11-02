@@ -1,25 +1,29 @@
-<img src="/assets/img/burger.png" alt="burger"/>
+<img id="pic" src="" alt="burger" />
 <h1 id="header">Eat-Da-Burger!</h1>
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li> {{burger_name}} <button class="devouredBtn"> Devoured </button></li>
-    {{/unless}}
-    {{/each}}
-</ul>
+<div class="row">
+    <div class="col-md-6">
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li id="burgerItems"> {{burger_name}} <button class="devouredBtn"> Devour It! </button></li>
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
 
-<h2></h2>
+    <div class="col-md-6">
+        <ul id="devouredList">
+            {{#each burgers}}
+            {{#if devoured}}
+            <li id="devouredItems"> {{burger_name}} </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
 
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    <li> {{burger_name}} </li>
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
+<h2 id="addBurger">Add a Burger</h2>
 
 <div class="form-group">
     <label for="ca">Burger Name:</label>

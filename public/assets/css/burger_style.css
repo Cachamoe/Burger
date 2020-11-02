@@ -16,3 +16,26 @@ body {
     margin-top: 1%;
     margin-left: 47%;
 }
+
+.devouredBtn {
+    margin-left: 1%;
+}
+
+#burgerItems {
+    margin-top: 1%;
+    margin-left: 15%;
+}
+
+#devouredList {
+    margin-left: 60%;
+    margin-top: -31%;
+}
+
+#addBurger {
+    margin-left: 43%;
+    margin-top: 27%;
+}
+
+#devouredItems {
+    margin-top: 3%;
+}

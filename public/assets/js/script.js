@@ -1,6 +1,6 @@
 
 $(".addBurgerBtn").on("click", function(event) {
-    var burger = {
+    let burger = {
         burger_name: $("#burgerName").val()
     }
     $.ajax({
@@ -9,5 +9,23 @@ $(".addBurgerBtn").on("click", function(event) {
         data: burger
     }).then(function() {
         location.reload()
-    })
+    });
+})
+
+$(".devouredBtn").on("click", function(event) {
+    let id = $(this).data("id");
+    let newDevoured = $(this).data("newDevoured");
+    
+    let newDevouredState = {
+        devoured: newDevoured
+    };
+
+    $.ajax({
+        url: "/api/burgers" + id,
+        method: "PUT",
+        data: newDevouredState
+    }).then(function() {
+        console.log("changed devoured state to", newDevoured);
+        location.reload()
+    });
 })
