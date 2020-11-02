@@ -12,18 +12,28 @@ let orm = {
             cbModel(results);
         })
     },
-    insertOne: function(tableName, cols, vals, cbModel) {
-        connection.query("INSERT INTO ?? (??,??) VALUES (?,?)", [tableName, cols[0], cols[1], vals[0], vals[1]], function(err, results) {
+    insertOne: function (tableName, cols, vals, cbModel) {
+        connection.query("INSERT INTO ?? (??,??) VALUES (?,?)", [tableName, cols[0], cols[1], vals[0], vals[1]], function (err, results) {
             cbModel(results);
         })
     },
-    
+    updateOne: function (tableName, objColVals, condition, cbModel) {
+        let queryString = "UPDATE " + tableName;
+
+        queryString += " SET ";
+        queryString += objToSql(objColVals);
+        queryString += " WHERE ";
+        queryString += condition;
+
+        console.log(queryString);
+        connection.query(queryString, function (err, results) {
+            if (err) {
+                throw err;
+            }
+            cbModel(results);
+        });
+    },
 }
-
-
-// insertOne()
-
-// updateOne()
 
 
 // Export the orm 
