@@ -14,18 +14,18 @@ $(".addBurgerBtn").on("click", function(event) {
 
 $(".devouredBtn").on("click", function(event) {
     let id = $(this).data("id");
-    let newDevoured = $(this).data("newDevoured");
+    let newDevoured = $(this).data("newdevoured");
     
     let newDevouredState = {
         devoured: newDevoured
     };
 
     $.ajax({
-        url: "/api/burgers" + id,
+        url: "/api/burgers/" + id,
         method: "PUT",
         data: newDevouredState
     }).then(function() {
         console.log("changed devoured state to", newDevoured);
-        location.reload()
+        location.reload();
     });
 })
