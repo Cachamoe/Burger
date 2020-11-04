@@ -1,4 +1,4 @@
-# Burger
+# Burger Logger
 ![](https://github.com/Cachamoe/Burger/blob/main/public/assets/Screen%20Shot%202020-11-03%20at%206.43.56%20PM.png)
 ## Overview
 This is a restaurant app that lets users input the names of burgers they'd like to eat!

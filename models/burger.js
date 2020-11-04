@@ -14,8 +14,8 @@ let burger = {
             cbController(results);
         });
     },
-    updateOne: function (condition, cbController) {
-        orm.updateOne("burgers", condition, function (results) {
+    updateOne: function (id, cbController) {
+        orm.updateOne("burgers", id, function (results) {
             cbController(results);
         });
     }

@@ -16,8 +16,8 @@ let orm = {
             cbModel(results);
         });
     },
-    updateOne: function (tableName, condition, cbModel) {
-        connection.query("UPDATE ?? SET devoured = 1 WHERE id = ?", [tableName, condition], function (err, results) {
+    updateOne: function (tableName, id, cbModel) {
+        connection.query("UPDATE ?? SET devoured = 1 WHERE id = ?", [tableName, id], function (err, results) {
             if (err) throw err;
             cbModel(results);
         });
