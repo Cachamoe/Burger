@@ -16,8 +16,9 @@ let orm = {
             cbModel(results);
         });
     },
-    updateOne: function (tableName, objColVals, condition, cbModel) {
-        connection.query("UPDATE ?? SET ? WHERE ?", [tableName, objColVals, condition], function (err, results) {
+    updateOne: function (tableName, condition, cbModel) {
+        connection.query("UPDATE ?? SET devoured = 1 WHERE id = ?", [tableName, condition], function (err, results) {
+            if (err) throw err;
             cbModel(results);
         });
     },
@@ -25,20 +26,3 @@ let orm = {
 
 // Export the orm 
 module.exports = orm;
-
-// updateOne: function (tableName, objColVals, condition, cbModel) {
-//     let queryString = "UPDATE " + tableName;
-
-//     queryString += " SET ";
-//     queryString += objToSql(objColVals);
-//     queryString += " WHERE ";
-//     queryString += condition;
-
-//     console.log(queryString);
-//     connection.query(queryString, function (err, results) {
-//         if (err) {
-//             throw err;
-//         }
-//         cbModel(results);
-//     });
-// },

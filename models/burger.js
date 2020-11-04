@@ -14,8 +14,8 @@ let burger = {
             cbController(results);
         });
     },
-    updateOne: function (objColVals, condition, cbController) {
-        orm.updateOne("burgers", objColVals, condition, function (results) {
+    updateOne: function (condition, cbController) {
+        orm.updateOne("burgers", condition, function (results) {
             cbController(results);
         });
     }
