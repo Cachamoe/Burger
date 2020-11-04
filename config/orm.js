@@ -17,7 +17,7 @@ let orm = {
         });
     },
     updateOne: function (tableName, objColVals, condition, cbModel) {
-        connection.query("UPDATE ?? SET ?? WHERE ?", [tableName, objColVals, condition], function (err, results) {
+        connection.query("UPDATE ?? SET ? WHERE ?", [tableName, objColVals, condition], function (err, results) {
             cbModel(results);
         });
     },

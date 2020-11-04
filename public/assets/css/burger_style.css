@@ -3,7 +3,7 @@ body {
 }
 
 #header {
-    margin-top: 5%;
+    margin-top: 2%;
     color: #F30;
     text-align: center;
 }
@@ -33,9 +33,14 @@ body {
 
 #addBurger {
     margin-left: 43%;
-    margin-top: 27%;
+    margin-top: 25%;
 }
 
 #devouredItems {
     margin-top: 3%;
+}
+
+#pic {
+    margin-left: 37.5%;
+    height: 250px;
 }

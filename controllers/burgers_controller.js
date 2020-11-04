@@ -30,7 +30,10 @@ router.post("/api/burgers", function (req, res) {
 
 router.put("/api/burgers/:id", function (req, res) {
     let condition = "id = " + req.params.id;
+    console.log("condition", condition);
+
     burger.updateOne({
+        burger_name: req.body.burger_name,
         devoured: req.body.devoured,
     }, condition, function (results) {
         if (results === 0) {
@@ -38,27 +41,11 @@ router.put("/api/burgers/:id", function (req, res) {
         } else {
             res.status(200).end();
         }
-    },
-    );
+    });
 })
 
 // Export routes 
 module.exports = router;
-
-// router.put("/api/burgers/:id", function (req, res) {
-//     let condition = "id = " + req.params.id;
-
-//     console.log("condition", condition);
-
-// burger.updateOne({
-//     devoured: req.body.devoured
-// }, condition, function (results) {
-//     if (results.changedRows == 0) {
-//         return res.status(404).end();
-//     } else {
-//         res.status(200).end();
-//     }
-// });
 
 
 
