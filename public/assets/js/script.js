@@ -12,6 +12,7 @@ $(".addBurgerBtn").on("click", function(event) {
     });
 })
 
+
 $(".devouredBtn").on("click", function(event) {
     let id = $(this).data("id");
     let newDevoured = $(this).data("newdevoured");
@@ -21,7 +22,7 @@ $(".devouredBtn").on("click", function(event) {
     };
 
     $.ajax({
-        url: "/api/burgers/" + id,
+        url: "/api/burgers/" + id, 
         method: "PUT",
         data: newDevouredState
     }).then(function() {
