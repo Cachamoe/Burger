@@ -10,7 +10,7 @@ Here is a link to the deployed webpage: [https://evening-castle-60643.herokuapp.
 2) Devour them to append to a new list! 
 
 ## Programs 
-Javascript, CSS, MySQL, Node.js, Handlebars, JSON, Terminal
+Javascript, CSS, MySQL, Node.js, Express.js, Handlebars, JSON, Terminal
 
 ## Author/s
 Caleb Chaney
