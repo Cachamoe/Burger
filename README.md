@@ -12,5 +12,8 @@ Here is a link to the deployed webpage: [https://evening-castle-60643.herokuapp.
 ## Programs 
 Javascript, CSS, MySQL, Node.js, Express.js, Handlebars, JSON, Terminal
 
+## License 
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
 ## Author/s
 Caleb Chaney
