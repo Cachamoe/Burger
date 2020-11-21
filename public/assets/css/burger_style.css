@@ -28,7 +28,8 @@ body {
 
 #devouredList {
     margin-left: 60%;
-    margin-top: -14%;
+    position: absolute;
+    top: 44%;
 }
 
 #addBurger {
