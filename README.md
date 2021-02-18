@@ -9,7 +9,7 @@ Here is a link to the deployed webpage: [https://evening-castle-60643.herokuapp.
 1) Add burgers that you wish to devour!
 2) Devour them to append to a new list! 
 
-## Programs 
+## Technologies 
 Javascript, CSS, MySQL, Node.js, Express.js, Handlebars, JSON, Terminal
 
 ## License 
